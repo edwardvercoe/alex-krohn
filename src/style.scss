@@ -1,0 +1,65 @@
+@import "./variables.scss";
+@import "./components/home.scss";
+@import "./components/Ceramics/ceramics.scss";
+@import "./components/About/about.scss";
+@import "./components/Illustration/illustration.scss";
+
+// FONTS
+
+@font-face {
+    font-family: "Messina Sans Light";
+    src: url("./fonts/MessinaSans-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Messina Sans Book";
+    src: url("./fonts/MessinaSans-Book.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Messina Sans Book Italic";
+    src: url("./fonts/MessinaSans-BookItalic.otf") format("opentype");
+}
+
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Messina Sans Light", sans-serif;
+    color: $black;
+    background-color: $bg;
+}
+
+.logo {
+    position: absolute;
+    margin: 0 auto;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.app__wrapper {
+    width: 100vw;
+    padding: 100px 40px 100px 40px;
+    display: flex;
+    justify-content: center;
+}
+

@@ -1,0 +1,31 @@
+#ceramics {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+    .card {
+        margin: 20px 20px;
+        &__image {
+            width: 300px;
+            height: auto;
+            object-fit: cover;
+            border: 1px solid #191D28;
+        }
+        &__title {
+            font-family: "Messina Sans Book", sans-serif;
+            line-height: 184.5%;
+            font-size: $f-med;
+            margin: 0;
+        }
+        &__subtitle {
+            font-family: "Messina Sans Book Italic", sans-serif;
+            line-height: 184.5%;
+            font-size: $f-sml;
+            margin: 0;
+        }
+    }
+}

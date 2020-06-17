@@ -1,0 +1,36 @@
+#about {
+    display: flex;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+
+    .about__image {
+        max-width: 50%;
+        padding: 0 20px;
+    }
+
+    .about__container {
+        max-width: 50%;
+        display: flex;
+        flex-direction: column;
+        h2 {
+            font-size: $f-lrg;
+            font-family: "Messina Sans Book", sans-serif;
+            line-height: 135.5%;
+        }
+
+        p {
+            font-size: $f-ml;
+            font-family: "Messina Sans Book", sans-serif;
+            line-height: 135.5%;
+        }
+
+        ul {
+            font-size: $f-med;
+            list-style-type: none;
+            padding: 0;
+            margin: auto 0 0 0;
+            font-family: "Messina Sans Book Italic", sans-serif;
+        }
+    }
+}
