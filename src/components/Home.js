@@ -19,7 +19,13 @@ export default function Home() {
   }
 
   return (
+
     <div id="home" ref={activeBackground} onMouseMove={e => _onMouseMove(e)}>
+    <img
+    className="logo"
+    src={process.env.PUBLIC_URL + "/assets/logo.svg"}
+    alt="Alexandria Logo"
+  />
       <ul className="directory__list">
         <Link to="/portfolio">
           <li>Projects</li>

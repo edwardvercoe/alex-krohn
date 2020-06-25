@@ -3,7 +3,9 @@
 @import "./components/Ceramics/ceramics.scss";
 @import "./components/About/about.scss";
 @import "./components/Illustration/illustration.scss";
-
+@import "./components/Portfolio/portfolio.scss";
+@import "./components/Header/header.scss";
+@import "./components/Footer/footer.scss";
 // FONTS
 
 @font-face {
@@ -19,6 +21,11 @@
 @font-face {
     font-family: "Messina Sans Book Italic";
     src: url("./fonts/MessinaSans-BookItalic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Messina Sans";
+    src: url("./fonts/MessinaSans-Regular.otf") format("opentype");
 }
 
 
@@ -58,8 +65,10 @@ body {
 
 .app__wrapper {
     width: 100vw;
-    padding: 100px 40px 100px 40px;
+    padding: 60px 40px 100px 40px;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 

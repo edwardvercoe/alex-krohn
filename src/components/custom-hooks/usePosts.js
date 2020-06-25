@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { getAllPosts } from '../../contentful'
+import { getAllPosts } from "../../api/contentful";
 
 const promise = getAllPosts()
 

@@ -1,19 +1,19 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
-import { getCeramicsPosts } from "../../contentful";
+// import { getCeramicsPosts } from "../../api/contentful";
 
-const promise = getCeramicsPosts();
+// const promise = getCeramicsPosts();
 
-export default function usePosts() {
-  const [ceramicPosts, setCeramicPosts] = useState([]);
-  const [isLoading, setLoading] = useState(true);
+// export default function useCeramicPosts() {
+//   const [ceramicPosts, setCeramicPosts] = useState([]);
+//   const [isLoading, setLoading] = useState(true);
 
-  useEffect(() => {
-    promise.then((data) => {
-      setCeramicPosts(data);
-      setLoading(false);
-    });
-  }, []);
+//   useEffect(() => {
+//     promise.then((data) => {
+//       setCeramicPosts(data);
+//       setLoading(false);
+//     });
+//   }, []);
 
-  return [ceramicPosts, isLoading];
-}
+//   return [ceramicPosts, isLoading];
+// }

@@ -15,14 +15,17 @@
         flex-direction: column;
         h2 {
             font-size: $f-lrg;
-            font-family: "Messina Sans Book", sans-serif;
+            font-family: "Messina Sans", sans-serif;
             line-height: 135.5%;
+            font-style: normal;
+            font-weight: 200;
         }
 
         p {
             font-size: $f-ml;
             font-family: "Messina Sans Book", sans-serif;
             line-height: 135.5%;
+            font-weight: 200;
         }
 
         ul {

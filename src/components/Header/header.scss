@@ -1,0 +1,17 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: $f-sml;
+
+    nav {
+        display: flex;
+
+        a {
+            margin: 0 20px;
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+}
