@@ -2,7 +2,10 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    max-width: 1160px;
     font-size: $f-sml;
+    margin: 40px auto;
+    padding: 0 20px;
 
     nav {
         display: flex;

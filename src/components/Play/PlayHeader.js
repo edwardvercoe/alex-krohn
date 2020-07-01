@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function PortfolioHeader() {
+export default function PlayHeader() {
   return (
-    <div className="porfolio__header">
+    <div className="play__header">
       <div>
-        <Link to="/portfolio">
-          <span>PROJECTS</span>
+        <Link to="/play">
+          <span>PLAY</span>
         </Link>
       </div>
       <p>©2020</p>

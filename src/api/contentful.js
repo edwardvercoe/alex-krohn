@@ -6,15 +6,15 @@ const client = require("contentful").createClient({
 const getPortfolioPosts = () =>
   client
     .getEntries({
-      content_type: "project",
+      content_type: "portfolioOrder",
     })
     .then((response) => response.items);
 
 const getSinglePost = (slug) =>
   client
     .getEntries({
-      "fields.slug": slug,
       content_type: "project",
+      "fields.slug": slug,
     })
     .then((response) => response.items);
 

@@ -16,7 +16,7 @@ export default function Header() {
         <Link to="/portfolio">
           <p>Projects</p>
         </Link>
-        <Link to="/">
+        <Link to="/play">
           <p>Play</p>
         </Link>
         <Link to="/about">

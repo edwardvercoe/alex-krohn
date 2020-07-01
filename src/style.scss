@@ -4,10 +4,17 @@
 @import "./components/About/about.scss";
 @import "./components/Illustration/illustration.scss";
 @import "./components/Portfolio/portfolio.scss";
+@import "./components/Portfolio/porfolioPost.scss";
 @import "./components/Header/header.scss";
 @import "./components/Footer/footer.scss";
+@import "./components/Play/play.scss";
+@import "./grid.scss";
 // FONTS
 
+@font-face {
+    font-family: "Messina Sans";
+    src: url("./fonts/MessinaSans-Regular.otf") format("opentype");
+}
 @font-face {
     font-family: "Messina Sans Light";
     src: url("./fonts/MessinaSans-Light.otf") format("opentype");
@@ -22,12 +29,6 @@
     font-family: "Messina Sans Book Italic";
     src: url("./fonts/MessinaSans-BookItalic.otf") format("opentype");
 }
-
-@font-face {
-    font-family: "Messina Sans";
-    src: url("./fonts/MessinaSans-Regular.otf") format("opentype");
-}
-
 
 html,
 body {
@@ -49,9 +50,11 @@ html {
 }
 
 body {
-    font-family: "Messina Sans Light", sans-serif;
+    font-family: "Messina Sans", sans-serif;
     color: $black;
     background-color: $bg;
+    font-size: $f-sml;
+    line-height: 147%;
 }
 
 .logo {
@@ -71,4 +74,3 @@ body {
     align-items: center;
     flex-direction: column;
 }
-
