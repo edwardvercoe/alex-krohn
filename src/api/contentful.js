@@ -10,6 +10,21 @@ const getPortfolioPosts = () =>
     })
     .then((response) => response.items);
 
+const getPlayPosts = () =>
+  client
+    .getEntries({
+      content_type: "playDisplayOrder",
+    })
+    .then((response) => response.items);
+
+const getSinglePlay = (slug) =>
+  client
+    .getEntries({
+      content_type: "play",
+      "fields.slug": slug,
+    })
+    .then((response) => response.items);
+
 const getSinglePost = (slug) =>
   client
     .getEntries({
@@ -18,4 +33,4 @@ const getSinglePost = (slug) =>
     })
     .then((response) => response.items);
 
-export { getSinglePost, getPortfolioPosts };
+export { getSinglePost, getPortfolioPosts, getPlayPosts, getSinglePlay };

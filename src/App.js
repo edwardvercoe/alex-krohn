@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./style.scss";
 import Home from "./components/Home";
 import About from "./components/About/About";
-import PortfolioPost from "./components/Portfolio/PortfolioPost";
 import Portfolio from "./components/Portfolio/Portfolio";
+import PortfolioPost from "./components/Portfolio/PortfolioPost";
 import Play from "./components/Play/Play";
+import PlayPost from "./components/Play/PlayPost";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
         <Route path="/portfolio" exact component={Portfolio} />
         <Route path="/portfolio/:slug" component={PortfolioPost} />
         <Route path="/about" component={About} />
-        <Route path="/play" component={Play} />
+        <Route path="/play" exact component={Play} />
+        <Route path="/play/:slug" component={PlayPost} />
       </Switch>
     </Router>
   );
