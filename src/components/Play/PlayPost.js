@@ -12,7 +12,6 @@ export default function PlayPost() {
   let supportingImgs;
 
   if (isLoading) return <p>Loading...</p>;
-  console.log(post);
 
   if (post)
     supportingImgs = post.supportingImages.map((img) => (
@@ -28,10 +27,6 @@ export default function PlayPost() {
       </div>
     ));
 
-  const myFunc = () => {
-    return console.log("sup sup");
-  };
-
   return (
     <React.Fragment>
       <Header />
@@ -44,17 +39,9 @@ export default function PlayPost() {
           <span>{post.details}</span>
         </div>
         {supportingImgs}
-        {myFunc()}
       </div>
 
       <Footer />
     </React.Fragment>
   );
 }
-
-// <div className="play__header">
-// <div className="play__header__links">
-//   <Link to="/play">PLAY</Link>
-//   <span>{post.tags.join(", ")}</span>
-// </div>
-// </div>

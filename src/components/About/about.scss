@@ -1,39 +1,41 @@
-#about {
+.about {
     display: flex;
-    position: relative;
     width: 100%;
     max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    // min-height: calc(100vh - 280px);
 
-    .about__image {
-        max-width: 50%;
-        padding: 0 20px;
+    > div {
+        width: 33.33%;
     }
 
-    .about__container {
+    &__image {
+        img {
+            max-width: 100%;
+            padding-right: 20px;
+        }
+    }
+
+    &__container {
         max-width: 50%;
         display: flex;
         flex-direction: column;
-        h2 {
-            font-size: $f-lrg;
-            font-family: "Messina Sans", sans-serif;
-            line-height: 135.5%;
-            font-style: normal;
-            font-weight: 200;
-        }
 
         p {
-            font-size: $f-ml;
+            font-size: $f-sml;
             font-family: "Messina Sans Book", sans-serif;
             line-height: 135.5%;
             font-weight: 200;
+            margin: 0;
         }
 
         ul {
-            font-size: $f-med;
+            font-size: 10px;
             list-style-type: none;
             padding: 0;
             margin: auto 0 0 0;
-            font-family: "Messina Sans Book Italic", sans-serif;
+            font-family: "Messina Sans Book", sans-serif;
         }
     }
 }

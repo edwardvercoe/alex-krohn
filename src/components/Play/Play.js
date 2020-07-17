@@ -3,23 +3,17 @@ import { Link } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import PlayHeader from "./PlayHeader";
-import PlayFilter from "./PlayFilter";
-import IsoTopeGrid from "react-isotope";
+import Masonry from "react-masonry-component";
 import usePlayPosts from "../custom-hooks/usePlayPosts";
 
-const filtersDefault = [
-  { label: "all", isChecked: true },
-  { label: "Ceramics", isChecked: false },
-  { label: "Illustration", isChecked: false },
-  { label: "Art", isChecked: false },
-  { label: "Photography", isChecked: false },
-];
-
 export default function Play() {
-  const [filters, setFilter] = useState(filtersDefault);
+  const [selectedOption, setSelectedOption] = useState("all");
   const [playPosts, isLoading] = usePlayPosts();
-
   if (isLoading) return <p>Loading...</p>;
+
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
 
   const playCards = playPosts[0].fields.playItems.map((item) => ({
     id: item.fields.slug,
@@ -29,25 +23,41 @@ export default function Play() {
     slug: item.fields.slug,
   }));
 
-  const onFilter = (event) => {
-    const {
-      target: { value, checked },
-    } = event;
+  const updateCards = (filter) => {
+    if (filter === "all")
+      return (
+        <Masonry className={"my-gallery-class"}>
+          {playCards.map((card) => (
+            <PlayCard
+              key={card.id}
+              title={card.title}
+              featuredImage={card.featuredImage}
+              filter={card.filter}
+              slug={card.slug}
+            />
+          ))}
+        </Masonry>
+      );
 
-    setFilter((state) =>
-      state.map((f) => {
-        if (f.label !== value) {
-          return {
-            ...f,
-            isChecked: false,
-          };
-        }
-
-        return {
-          ...f,
-          isChecked: checked,
-        };
-      })
+    return (
+      <Masonry className={"my-gallery-class"}>
+        {playCards
+          .filter(
+            (item) =>
+              item.filter.some(
+                (tag) => tag.toLowerCase() === selectedOption
+              ) === true
+          )
+          .map((card) => (
+            <PlayCard
+              key={card.id}
+              title={card.title}
+              featuredImage={card.featuredImage}
+              filter={card.filter}
+              slug={card.slug}
+            />
+          ))}
+      </Masonry>
     );
   };
 
@@ -56,35 +66,61 @@ export default function Play() {
       <Header />
       <main className="play">
         <PlayHeader />
-        <PlayFilter />
-        <div>
-          <div className="play__filters">
-            {filters.map((f) => (
-              <button key={`${f.label}_key`}>
+        <div className="play__filters">
+          <div>Tags</div>
+          <div>
+            <form>
+              <div className="radio">
                 <input
-                  id={f.label}
-                  type="checkbox"
-                  value={f.label}
-                  onChange={onFilter}
-                  checked={f.isChecked}
+                  type="radio"
+                  value="all"
+                  checked={selectedOption === "all"}
+                  onChange={(e) => handleOptionChange(e)}
                 />
-                <label htmlFor={f.label}>{f.label}</label>
-              </button>
-            ))}
-          </div>
-          <div className="play__isotopeGrid">
-            <IsoTopeGrid gridLayout={playCards} noOfCols={3} filters={filters}>
-              {playCards.map((card) => (
-                <PlayCard
-                  key={card.id}
-                  title={card.title}
-                  featuredImage={card.featuredImage}
-                  filter={card.filter}
-                  slug={card.slug}
+                <label>ALL</label>
+              </div>
+              <div className="radio">
+                <input
+                  type="radio"
+                  value="ceramics"
+                  checked={selectedOption === "ceramics"}
+                  onChange={(e) => handleOptionChange(e)}
                 />
-              ))}
-            </IsoTopeGrid>
+                <label>CERAMICS</label>
+              </div>
+              <div className="radio">
+                <input
+                  type="radio"
+                  value="illustration"
+                  checked={selectedOption === "illustration"}
+                  onChange={(e) => handleOptionChange(e)}
+                />
+                <label>ILLUSTRATION</label>
+              </div>
+              <div className="radio">
+                <input
+                  type="radio"
+                  value="art"
+                  checked={selectedOption === "art"}
+                  onChange={(e) => handleOptionChange(e)}
+                />
+                <label>ART</label>
+              </div>
+              <div className="radio">
+                <input
+                  type="radio"
+                  value="photography"
+                  checked={selectedOption === "photography"}
+                  onChange={(e) => handleOptionChange(e)}
+                />
+                <label>PHOTOGRAPHY</label>
+              </div>
+            </form>
           </div>
+          <div>2018, 2019, 2020</div>
+        </div>
+        <div>
+          <div className="play__masonry">{updateCards(selectedOption)}</div>
         </div>
       </main>
       <Footer />
