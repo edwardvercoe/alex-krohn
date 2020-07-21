@@ -17,7 +17,7 @@ export default function SinglePost() {
       supportingImgs = post.supportingImages.map((img) => (
         <div
           className={
-            img.fields.description.length > 0
+            img.fields.description
               ? img.fields.description.split(" ").map((x) => `${x} `) +
                 "post__images__container"
               : "column-md-12 post__images__container"

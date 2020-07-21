@@ -17,10 +17,10 @@ export default function PlayPost() {
     supportingImgs = post.supportingImages.map((img) => (
       <div
         className={
-          img.fields.description.length > 0
+          img.fields.description
             ? img.fields.description.split(" ").map((x) => `${x} `) +
               "playpost__images__container"
-            : "column-md-12 play__images__container"
+            : "column-md-12 playpost__images__container"
         }
       >
         <img src={`http:${img.fields.file.url}`} alt={img.fields.title} />
