@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { getPortfolioPosts } from "../../api/contentful";
+import { getPortfolioPosts } from "../api/contentful";
 
 const promise = getPortfolioPosts();
 

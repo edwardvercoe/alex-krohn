@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 
-import { getSinglePost } from "../../api/contentful";
+import { getSinglePlay } from "../api/contentful";
 
 export default function useSinglePost(slug) {
-  const promise = getSinglePost(slug);
+  const promise = getSinglePlay(slug);
 
   const [post, setPost] = useState(null);
   const [isLoading, setLoading] = useState(true);

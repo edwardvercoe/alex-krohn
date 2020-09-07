@@ -1,5 +1,5 @@
-$black: #191D28;
-$bg: #FFFFFF;
+$black: #191d28;
+$bg: #ffffff;
 
 // font sizes
 
@@ -9,3 +9,28 @@ $f-med: 16px;
 $f-ml: 22px;
 $f-lrg: 26px;
 $f-head: 28px;
+
+// Mixins
+
+@mixin mobile {
+    @media (max-width: 899px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: 600px) and (max-width: 899px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 900px) {
+        @content;
+    }
+}
+
+// EG. How to use...
+
+// @include mobile {
+//    font-size: 1rem;
+// }

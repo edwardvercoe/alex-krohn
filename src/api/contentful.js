@@ -17,6 +17,13 @@ const getPlayPosts = () =>
     })
     .then((response) => response.items);
 
+const getFooter = () =>
+  client
+    .getEntries({
+      content_type: "footer",
+    })
+    .then((response) => response.items);
+
 const getSinglePlay = (slug) =>
   client
     .getEntries({
@@ -33,4 +40,10 @@ const getSinglePost = (slug) =>
     })
     .then((response) => response.items);
 
-export { getSinglePost, getPortfolioPosts, getPlayPosts, getSinglePlay };
+export {
+  getSinglePost,
+  getPortfolioPosts,
+  getPlayPosts,
+  getSinglePlay,
+  getFooter,
+};

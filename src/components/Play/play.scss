@@ -1,18 +1,18 @@
 .play {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0 20px;
     min-height: calc(100vh - 280px);
 
     &__header {
-        border-top: 0.5px solid #000000;
-        border-bottom: 0.5px solid #000000;
+        border-top: 1px solid #000000;
+        border-bottom: 1px solid #000000;
         margin-top: 40px;
         display: flex;
         justify-content: space-between;
         width: 100%;
-        max-width: 1200px;
+        max-width: 1300px;
         position: relative;
         font-size: 10px;
 

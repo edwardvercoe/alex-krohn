@@ -4,7 +4,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import PlayHeader from "./PlayHeader";
 
-import useSinglePlay from "../custom-hooks/useSinglePlay";
+import useSinglePlay from "../../custom-hooks/useSinglePlay";
 
 export default function PlayPost() {
   const { slug } = useParams();

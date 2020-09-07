@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
-import PlayHeader from "./PlayHeader";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
+import PlayHeader from "../components/Play/PlayHeader";
 import Masonry from "react-masonry-component";
 import usePlayPosts from "../custom-hooks/usePlayPosts";
 

@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
-import PortfolioHeader from "./PortfolioHeader";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
+import PortfolioHeader from "../components/Portfolio/PortfolioHeader";
 import usePorfolioPosts from "../custom-hooks/usePortfolioPosts";
 
 export default function Portfolio() {

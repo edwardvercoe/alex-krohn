@@ -4,7 +4,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import PortfolioHeader from "./PortfolioHeader";
 
-import useSinglePost from "../custom-hooks/useSinglePost";
+import useSinglePost from "../../custom-hooks/useSinglePost";
 
 export default function SinglePost() {
   const { slug } = useParams();

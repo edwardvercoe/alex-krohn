@@ -1,14 +1,17 @@
 #portfolio {
-    width: 100%;
-    max-width: 1200px;
+    width: calc(100% - 20px);
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 0 20px;
 
     .container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin-top: 40px;
+        padding: 0;
+        margin: 0;
+        margin-top: 20px;
+        width: 100%;
+        max-width: 1300px;
 
         .card {
             width: calc(50% - 20px);
@@ -56,7 +59,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
     position: relative;
     font-size: 10px;
 
@@ -66,7 +69,7 @@
     }
 
     p {
-        margin: 15px 0;
+        margin: 10px 0;
     }
 
     span {

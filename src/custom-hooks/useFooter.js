@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
 
-import { getPlayPosts } from "../../api/contentful";
+import { getFooter } from "../api/contentful";
 
-const promise = getPlayPosts();
+const promise = getFooter();
 
 export default function usePlayPosts() {
-  const [playPosts, setPlayPosts] = useState([]);
+  const [footerContent, setFooterContent] = useState([]);
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     promise.then((data) => {
-      setPlayPosts(data);
+      setFooterContent(data);
       setLoading(false);
     });
   }, []);
 
-  return [playPosts, isLoading];
+  return [footerContent, isLoading];
 }
